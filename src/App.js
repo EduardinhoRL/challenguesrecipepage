@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Components/Header' 
+import Content from './Components/Content'
+
+import styled from 'styled-components'
+
+const Container = styled.div`
+  width: 100%;
+  max-width: 1440px;
+  margin: 50px auto;
+  padding: 0 10px;
+
+  @media only screen and (max-width: 768px) {
+    margin: 10px auto;
+  }
+
+`
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Container>
+        <Header />
+        <Content />
+      </Container>
   );
 }
 
